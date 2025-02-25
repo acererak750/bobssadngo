@@ -9,15 +9,15 @@ function Fundraising() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80")',
+            backgroundImage: 'url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80")',
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
         </div>
         <div className="relative h-full flex items-center justify-center text-center px-4">
           <div className="max-w-4xl">
-            <h1 className="text-6xl font-bold text-white mb-6">Transform Lives Through Culinary Education</h1>
-            <p className="text-xl text-white mb-8">Your donation helps underprivileged individuals build a career in the culinary arts</p>
+            <h1 className="text-6xl font-bold text-white mb-6">Help Us Feed Dreams</h1>
+            <p className="text-xl text-white mb-8">Every donation helps someone break free from poverty through culinary education</p>
             <a 
               href="https://www.fueladream.com/home/campaign/84396" 
               target="_blank" 
@@ -31,20 +31,109 @@ function Fundraising() {
         </div>
       </div>
 
-      {/* Impact Stats */}
+      {/* Stories Section */}
       <div className="py-20 bg-orange-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">Stories of Hope</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1518398046578-8cca57782e17?auto=format&fit=crop&q=80" 
+                alt="Street children looking at camera" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <p className="text-gray-600 italic mb-4">
+                  "Before MonkeyMan, we didn't know where our next meal would come from. Now my mother works in their kitchen, and I'm studying to become a chef."
+                </p>
+                <p className="text-orange-500 font-semibold">- Arjun, 14 years old</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&q=80" 
+                alt="Young boy looking through window" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <p className="text-gray-600 italic mb-4">
+                  "I used to beg near restaurants. Today, I'm training to work in one. MonkeyMan gave me more than food - they gave me dignity."
+                </p>
+                <p className="text-orange-500 font-semibold">- Ravi, Student Chef</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1444664597500-f3ea66c4d289?auto=format&fit=crop&q=80" 
+                alt="Mother and child" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <p className="text-gray-600 italic mb-4">
+                  "As a single mother, I couldn't afford to feed my children. The training program helped me become independent and provide for my family."
+                </p>
+                <p className="text-orange-500 font-semibold">- Lakshmi, Graduate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Impact Gallery */}
+      <div className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">The Face of Change</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="relative h-96 rounded-2xl overflow-hidden group">
+              <img 
+                src="https://images.unsplash.com/photo-1504159506876-4b8a1c0c4414?auto=format&fit=crop&q=80" 
+                alt="Poor children" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                <p className="text-white text-xl">Every child deserves a chance to dream beyond the streets</p>
+              </div>
+            </div>
+            <div className="grid grid-rows-2 gap-8">
+              <div className="relative h-44 rounded-2xl overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1441448770220-76743f9e6af6?auto=format&fit=crop&q=80" 
+                  alt="Homeless man" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                  <p className="text-white">From homeless to hopeful through culinary training</p>
+                </div>
+              </div>
+              <div className="relative h-44 rounded-2xl overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&q=80" 
+                  alt="People getting food" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                  <p className="text-white">Your donation feeds both bodies and dreams</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Impact Stats */}
+      <div className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Your Impact</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
               <GraduationCap className="w-12 h-12 text-orange-500 mx-auto mb-4" />
               <h3 className="text-4xl font-bold mb-2">150+</h3>
-              <p className="text-gray-600">Students Graduated</p>
+              <p className="text-gray-600">Lives Transformed</p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
               <ChefHat className="w-12 h-12 text-orange-500 mx-auto mb-4" />
               <h3 className="text-4xl font-bold mb-2">90%</h3>
-              <p className="text-gray-600">Employment Rate</p>
+              <p className="text-gray-600">Now Employed</p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
               <Star className="w-12 h-12 text-orange-500 mx-auto mb-4" />
@@ -55,49 +144,8 @@ function Fundraising() {
         </div>
       </div>
 
-      {/* Success Stories */}
-      <div className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">Success Stories</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80" 
-                alt="Student cooking" 
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold mb-4">Rahul's Journey</h3>
-                <p className="text-gray-600 mb-4">
-                  "Coming from a humble background, I never thought I could become a professional chef. 
-                  MonkeyMan's program not only taught me culinary skills but also gave me confidence. 
-                  Today, I'm working as a sous chef at a leading restaurant."
-                </p>
-                <p className="text-orange-500 font-semibold">- Rahul, Class of 2023</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?auto=format&fit=crop&q=80" 
-                alt="Student learning" 
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold mb-4">Priya's Story</h3>
-                <p className="text-gray-600 mb-4">
-                  "The program changed my life. As a single mother, I struggled to make ends meet. 
-                  Through the training and support from MonkeyMan, I now run my own catering business 
-                  and can provide a better future for my children."
-                </p>
-                <p className="text-orange-500 font-semibold">- Priya, Class of 2022</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Donation Impact */}
-      <div className="py-20 bg-gray-50">
+      <div className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Your Donation Makes a Difference</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -129,10 +177,10 @@ function Fundraising() {
       {/* CTA Section */}
       <div className="py-20 bg-orange-500 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8">Help Us Create More Success Stories</h2>
+          <h2 className="text-4xl font-bold mb-8">Be Part of Their Journey</h2>
           <p className="text-xl mb-12">
-            Your contribution helps underprivileged individuals transform their lives through 
-            culinary education. Together, we can make a difference.
+            Your contribution can change someone's life forever. Help us create more success stories 
+            and give hope to those who need it most.
           </p>
           <a 
             href="https://www.fueladream.com/home/campaign/84396" 
