@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChefHat, Heart, Clock, Phone, Mail, MapPin, Users, Moon as Monkey } from 'lucide-react';
+import FoodBank from './FoodBank';
 
 function App() {
   const [showMonkeys, setShowMonkeys] = useState(false);
   const [keys, setKeys] = useState<string[]>([]);
   const [scrollY, setScrollY] = useState(0);
+  const [currentPage, setCurrentPage] = useState('home');
   
   // Refs for scroll animations
   const heroRef = useRef<HTMLDivElement>(null);
@@ -86,6 +88,29 @@ function App() {
     }
   ];
 
+  if (currentPage === 'foodbank') {
+    return (
+      <>
+        {/* Navigation Bar */}
+        <nav className="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="flex items-center justify-between h-16">
+              <div className="flex items-center gap-2 cursor-pointer" onClick={() => setCurrentPage('home')}>
+                <Monkey className="w-8 h-8 text-orange-500" />
+                <span className="text-xl font-bold">MonkeyMan</span>
+              </div>
+              <div className="hidden md:flex space-x-8">
+                <button onClick={() => setCurrentPage('home')} className="text-gray-700 hover:text-orange-500 transition-colors">Home</button>
+                <button onClick={() => setCurrentPage('foodbank')} className="text-orange-500 font-medium">Food Bank</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <FoodBank />
+      </>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation Bar */}
@@ -100,6 +125,7 @@ function App() {
               <a href="#about" className="text-gray-700 hover:text-orange-500 transition-colors">About</a>
               <a href="#training" className="text-gray-700 hover:text-orange-500 transition-colors">Training</a>
               <a href="#contact" className="text-gray-700 hover:text-orange-500 transition-colors">Contact</a>
+              <button onClick={() => setCurrentPage('foodbank')} className="text-gray-700 hover:text-orange-500 transition-colors">Food Bank</button>
             </div>
           </div>
         </div>
