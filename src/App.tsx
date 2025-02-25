@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChefHat, Heart, Clock, Phone, Mail, MapPin, Users, Moon as Monkey } from 'lucide-react';
 import FoodBank from './FoodBank';
 import Fundraising from './Fundraising';
+import Plan from './Plan';
 
 function App() {
   const [showMonkeys, setShowMonkeys] = useState(false);
@@ -89,25 +90,49 @@ function App() {
     }
   ];
 
+  const renderNavigation = () => (
+    <nav className="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center gap-2 cursor-pointer" onClick={() => setCurrentPage('home')}>
+            <Monkey className="w-8 h-8 text-orange-500" />
+            <span className="text-xl font-bold">MonkeyMan</span>
+          </div>
+          <div className="hidden md:flex space-x-8">
+            <button 
+              onClick={() => setCurrentPage('home')} 
+              className={`transition-colors ${currentPage === 'home' ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
+            >
+              Home
+            </button>
+            <button 
+              onClick={() => setCurrentPage('plan')} 
+              className={`transition-colors ${currentPage === 'plan' ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
+            >
+              Our Plan
+            </button>
+            <button 
+              onClick={() => setCurrentPage('foodbank')} 
+              className={`transition-colors ${currentPage === 'foodbank' ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
+            >
+              Food Bank
+            </button>
+            <button 
+              onClick={() => setCurrentPage('fundraising')} 
+              className={`transition-colors ${currentPage === 'fundraising' ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
+            >
+              Fundraising
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+
   if (currentPage === 'foodbank') {
     return (
       <>
-        {/* Navigation Bar */}
-        <nav className="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="flex items-center justify-between h-16">
-              <div className="flex items-center gap-2 cursor-pointer" onClick={() => setCurrentPage('home')}>
-                <Monkey className="w-8 h-8 text-orange-500" />
-                <span className="text-xl font-bold">MonkeyMan</span>
-              </div>
-              <div className="hidden md:flex space-x-8">
-                <button onClick={() => setCurrentPage('home')} className="text-gray-700 hover:text-orange-500 transition-colors">Home</button>
-                <button onClick={() => setCurrentPage('foodbank')} className="text-orange-500 font-medium">Food Bank</button>
-                <button onClick={() => setCurrentPage('fundraising')} className="text-gray-700 hover:text-orange-500 transition-colors">Fundraising</button>
-              </div>
-            </div>
-          </div>
-        </nav>
+        {renderNavigation()}
         <FoodBank />
       </>
     );
@@ -116,47 +141,24 @@ function App() {
   if (currentPage === 'fundraising') {
     return (
       <>
-        {/* Navigation Bar */}
-        <nav className="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="flex items-center justify-between h-16">
-              <div className="flex items-center gap-2 cursor-pointer" onClick={() => setCurrentPage('home')}>
-                <Monkey className="w-8 h-8 text-orange-500" />
-                <span className="text-xl font-bold">MonkeyMan</span>
-              </div>
-              <div className="hidden md:flex space-x-8">
-                <button onClick={() => setCurrentPage('home')} className="text-gray-700 hover:text-orange-500 transition-colors">Home</button>
-                <button onClick={() => setCurrentPage('foodbank')} className="text-gray-700 hover:text-orange-500 transition-colors">Food Bank</button>
-                <button onClick={() => setCurrentPage('fundraising')} className="text-orange-500 font-medium">Fundraising</button>
-              </div>
-            </div>
-          </div>
-        </nav>
+        {renderNavigation()}
         <Fundraising />
+      </>
+    );
+  }
+
+  if (currentPage === 'plan') {
+    return (
+      <>
+        {renderNavigation()}
+        <Plan />
       </>
     );
   }
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation Bar */}
-      <nav className="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-2">
-              <Monkey className="w-8 h-8 text-orange-500" />
-              <span className="text-xl font-bold">MonkeyMan</span>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#about" className="text-gray-700 hover:text-orange-500 transition-colors">About</a>
-              <a href="#training" className="text-gray-700 hover:text-orange-500 transition-colors">Training</a>
-              <a href="#contact" className="text-gray-700 hover:text-orange-500 transition-colors">Contact</a>
-              <button onClick={() => setCurrentPage('foodbank')} className="text-gray-700 hover:text-orange-500 transition-colors">Food Bank</button>
-              <button onClick={() => setCurrentPage('fundraising')} className="text-gray-700 hover:text-orange-500 transition-colors">Fundraising</button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      {renderNavigation()}
 
       {/* Hero Section */}
       <header className="relative h-[100vh] overflow-hidden">

@@ -44,7 +44,7 @@ function Fundraising() {
               />
               <div className="p-6">
                 <p className="text-gray-600 italic mb-4">
-                  "Before MonkeyMan, we didn't know where our next meal would come from. Now my mother works in their kitchen, and I'm studying to become a chef."
+                  "Before MonkeyMan, we didn't know where our next meal would come from but thanks to MonkeyMan I can reliably be fed. I dont ever have to worry about food again"
                 </p>
                 <p className="text-orange-500 font-semibold">- Arjun, 14 years old</p>
               </div>
