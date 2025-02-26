@@ -32,7 +32,7 @@ function Employees() {
                 <div className="absolute inset-0 bg-orange-500 rounded-full opacity-10"></div>
                 <Coffee className="w-16 h-16 text-orange-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
               </div>
-              <h3 className="text-2xl font-semibold mb-2 text-center">Koki</h3>
+              <h3 className="text-2xl font-semibold mb-2 text-center">Koki Suda</h3>
               <p className="text-orange-500 text-center mb-4">Head Chef & Instructor</p>
               <p className="text-gray-600 text-center">
                 Koki leads our culinary 
@@ -44,7 +44,7 @@ function Employees() {
                 <div className="absolute inset-0 bg-orange-500 rounded-full opacity-10"></div>
                 <Star className="w-16 h-16 text-orange-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
               </div>
-              <h3 className="text-2xl font-semibold mb-2 text-center">Pronnoy</h3>
+              <h3 className="text-2xl font-semibold mb-2 text-center">Pronnoy Gupta</h3>
               <p className="text-orange-500 text-center mb-4">Founder & CEO</p>
               <p className="text-gray-600 text-center">
                  Pronnoy's passion for culinary education and social impact drove him to 
@@ -56,10 +56,10 @@ function Employees() {
                 <div className="absolute inset-0 bg-orange-500 rounded-full opacity-10"></div>
                 <Heart className="w-16 h-16 text-orange-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
               </div>
-              <h3 className="text-2xl font-semibold mb-2 text-center">Soham</h3>
+              <h3 className="text-2xl font-semibold mb-2 text-center">Soham Rungta</h3>
               <p className="text-orange-500 text-center mb-4">Head of Operations</p>
               <p className="text-gray-600 text-center">
-               	Soham oversees 
+                Soham oversees 
                 day-to-day operations and ensures our programs run smoothly and effectively.
               </p>
             </div>
@@ -154,51 +154,6 @@ function Employees() {
               <Building className="w-12 h-12 text-orange-500 mx-auto mb-6" />
               <h3 className="text-xl font-semibold mb-4">Sustainability</h3>
               <p className="text-gray-600">We create lasting impact through sustainable practices.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership Section */}
-      <section className="py-32 px-4 bg-orange-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold text-center mb-24">Leadership Team</h2>
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="bg-white rounded-2xl p-8 shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-              <div className="relative w-32 h-32 mx-auto mb-6">
-                <div className="absolute inset-0 bg-orange-500 rounded-full opacity-10"></div>
-                <Star className="w-16 h-16 text-orange-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-              </div>
-              <h3 className="text-2xl font-semibold mb-2 text-center">Pronnoy Gupta</h3>
-              <p className="text-orange-500 text-center mb-4">Founder & CEO</p>
-              <p className="text-gray-600 text-center">
-                Pronnoy's passion for culinary education and social impact drove him to 
-                establish CookMonkey.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-              <div className="relative w-32 h-32 mx-auto mb-6">
-                <div className="absolute inset-0 bg-orange-500 rounded-full opacity-10"></div>
-                <Heart className="w-16 h-16 text-orange-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-              </div>
-              <h3 className="text-2xl font-semibold mb-2 text-center">Soham Rungta</h3>
-              <p className="text-orange-500 text-center mb-4">Head of Operations</p>
-              <p className="text-gray-600 text-center">
-                Soham oversees 
-                day-to-day operations and ensures our programs run smoothly and effectively.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-              <div className="relative w-32 h-32 mx-auto mb-6">
-                <div className="absolute inset-0 bg-orange-500 rounded-full opacity-10"></div>
-                <Coffee className="w-16 h-16 text-orange-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-              </div>
-              <h3 className="text-2xl font-semibold mb-2 text-center">Koki Suda</h3>
-              <p className="text-orange-500 text-center mb-4">Head Chef & Instructor</p>
-              <p className="text-gray-600 text-center">
-                Koki leads our culinary 
-                education program and mentors aspiring chefs.
-              </p>
             </div>
           </div>
         </div>
