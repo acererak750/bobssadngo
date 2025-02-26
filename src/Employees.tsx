@@ -1,38 +1,11 @@
-import React, { useRef, useEffect } from 'react';
-import { ChefHat, Heart, Users, GraduationCap, Building } from 'lucide-react';
+import React from 'react';
+import { ChefHat, Heart, Users, GraduationCap, Building, Star, Coffee } from 'lucide-react';
 
 function Employees() {
-  const sections = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100', 'translate-y-0');
-            entry.target.classList.remove('opacity-0', 'translate-y-16');
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
-    sections.current.forEach((section) => {
-      if (section) observer.observe(section);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div 
-        ref={(el) => (sections.current[0] = el)}
-        className="relative h-[60vh] overflow-hidden transform transition-all duration-1000 opacity-0 translate-y-16"
-      >
+      <div className="relative h-[60vh] overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -44,60 +17,122 @@ function Employees() {
         <div className="relative h-full flex items-center justify-center text-center px-4">
           <div className="max-w-4xl">
             <h1 className="text-6xl font-bold text-white mb-6">Our Team</h1>
-            <p className="text-xl text-white">Passionate individuals dedicated to transforming lives through culinary education</p>
+            <p className="text-xl text-white">Meet the passionate individuals behind CookMonkey</p>
           </div>
         </div>
       </div>
 
-      {/* Current Openings */}
-      <section 
-        ref={(el) => (sections.current[1] = el)}
-        className="py-32 px-4 transform transition-all duration-1000 opacity-0 translate-y-16"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-12">Join Our Team</h2>
-          <p className="text-xl text-gray-600 mb-12">
-            We're always looking for passionate individuals who want to make a difference in the lives of others through culinary education.
-          </p>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-orange-50 rounded-2xl p-8">
-              <ChefHat className="w-12 h-12 text-orange-500 mx-auto mb-6" />
-              <h3 className="text-2xl font-semibold mb-4">Culinary Positions</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li>Kitchen Instructors</li>
-                <li>Sous Chefs</li>
-                <li>Pastry Specialists</li>
-                <li>Food Safety Coordinators</li>
-              </ul>
+      {/* Leadership Team */}
+      <section className="py-32 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-5xl font-bold text-center mb-24">Leadership Team</h2>
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="bg-white rounded-2xl p-8 shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+              <div className="relative w-32 h-32 mx-auto mb-6">
+                <div className="absolute inset-0 bg-orange-500 rounded-full opacity-10"></div>
+                <Star className="w-16 h-16 text-orange-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-2 text-center">Pronnoy Roy</h3>
+              <p className="text-orange-500 text-center mb-4">Founder & CEO</p>
+              <p className="text-gray-600 text-center">
+                A visionary leader with 15 years of experience in the hospitality industry. 
+                Pronnoy's passion for culinary education and social impact drove him to 
+                establish CookMonkey.
+              </p>
             </div>
-            <div className="bg-orange-50 rounded-2xl p-8">
-              <Users className="w-12 h-12 text-orange-500 mx-auto mb-6" />
-              <h3 className="text-2xl font-semibold mb-4">Support Roles</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li>Program Coordinators</li>
-                <li>Administrative Staff</li>
-                <li>Volunteer Managers</li>
-                <li>Community Outreach</li>
-              </ul>
+            <div className="bg-white rounded-2xl p-8 shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+              <div className="relative w-32 h-32 mx-auto mb-6">
+                <div className="absolute inset-0 bg-orange-500 rounded-full opacity-10"></div>
+                <Heart className="w-16 h-16 text-orange-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-2 text-center">Soham Chatterjee</h3>
+              <p className="text-orange-500 text-center mb-4">Head of Operations</p>
+              <p className="text-gray-600 text-center">
+                With extensive experience in non-profit management, Soham oversees 
+                day-to-day operations and ensures our programs run smoothly and effectively.
+              </p>
             </div>
-          </div>
-          <div className="mt-12">
-            <a 
-              href="mailto:careers@cookmonkey.org" 
-              className="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full text-xl font-semibold hover:bg-orange-600 transition-colors"
-            >
-              <Heart className="w-6 h-6" />
-              Apply Now
-            </a>
+            <div className="bg-white rounded-2xl p-8 shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+              <div className="relative w-32 h-32 mx-auto mb-6">
+                <div className="absolute inset-0 bg-orange-500 rounded-full opacity-10"></div>
+                <Coffee className="w-16 h-16 text-orange-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-2 text-center">Koki Patel</h3>
+              <p className="text-orange-500 text-center mb-4">Head Chef & Instructor</p>
+              <p className="text-gray-600 text-center">
+                A renowned chef with over 20 years of experience, Koki leads our culinary 
+                education program and mentors aspiring chefs.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section 
-        ref={(el) => (sections.current[2] = el)}
-        className="py-32 px-4 bg-gray-50 transform transition-all duration-1000 opacity-0 translate-y-16"
-      >
+      {/* Team Requirements */}
+      <section className="py-32 px-4 bg-orange-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16">Current Openings</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+              <ChefHat className="w-12 h-12 text-orange-500 mb-6" />
+              <h3 className="text-2xl font-semibold mb-4">Culinary Instructors</h3>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
+                  <p>5+ years professional experience</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
+                  <p>Passion for teaching and mentoring</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
+                  <p>Strong communication skills</p>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+              <Building className="w-12 h-12 text-orange-500 mb-6" />
+              <h3 className="text-2xl font-semibold mb-4">Operations Staff</h3>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
+                  <p>Kitchen management experience</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
+                  <p>Inventory control expertise</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
+                  <p>Team coordination skills</p>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+              <Heart className="w-12 h-12 text-orange-500 mb-6" />
+              <h3 className="text-2xl font-semibold mb-4">Community Outreach</h3>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
+                  <p>Experience in social work</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
+                  <p>Strong networking abilities</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
+                  <p>Program coordination skills</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-32 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-5xl font-bold mb-24">Our Values</h2>
           <div className="grid md:grid-cols-4 gap-8">

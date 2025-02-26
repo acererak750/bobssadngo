@@ -4,6 +4,7 @@ import FoodBank from './FoodBank';
 import Fundraising from './Fundraising';
 import Plan from './Plan';
 import Employees from './Employees';
+import Vision from './Vision';
 
 function App() {
   const [showMonkeys, setShowMonkeys] = useState(false);
@@ -108,6 +109,12 @@ function App() {
               </div>
             </div>
             <button 
+              onClick={() => setCurrentPage('vision')} 
+              className={`transition-colors ${currentPage === 'vision' ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
+            >
+              Vision
+            </button>
+            <button 
               onClick={() => setCurrentPage('foodbank')} 
               className={`transition-colors ${currentPage === 'foodbank' ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
             >
@@ -161,6 +168,15 @@ function App() {
     );
   }
 
+  if (currentPage === 'vision') {
+    return (
+      <>
+        {renderNavigation()}
+        <Vision />
+      </>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {renderNavigation()}
@@ -188,42 +204,6 @@ function App() {
           </div>
         </div>
       </header>
-
-      {/* Vision Statement */}
-      <section ref={visionRef} className="py-32 px-4 bg-orange-50">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-12">Our Vision</h2>
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80" 
-                alt="Vision"
-                className="rounded-2xl shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
-            </div>
-            <div className="text-left space-y-6">
-              <p className="text-2xl font-light leading-relaxed">
-                "To create a world where culinary education becomes a powerful catalyst for social change, transforming lives and communities through the art of cooking."
-              </p>
-              <div className="space-y-4 text-lg text-gray-700">
-                <p>
-                  We envision a future where every individual, regardless of their background, has the opportunity to pursue their culinary dreams and achieve financial independence through professional cooking skills.
-                </p>
-                <p>
-                  By 2030, we aim to:
-                </p>
-                <ul className="space-y-2 list-disc list-inside">
-                  <li>Train 1000+ underprivileged individuals in professional culinary arts</li>
-                  <li>Establish 5 food banks across major cities in India</li>
-                  <li>Create a self-sustaining ecosystem of culinary education and community service</li>
-                  <li>Achieve 100% employment rate for our graduates</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* About Section */}
       <section id="about" ref={aboutRef} className="py-32 px-4 bg-white">
@@ -344,19 +324,19 @@ function App() {
                 <h4 className="text-2xl font-semibold mb-6">Practical Application</h4>
                 <ul className="space-y-4 text-lg text-gray-600">
                   <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
                     Menu planning and execution
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
                     Quality control management
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
                     Customer service excellence
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
                     Advanced cooking techniques
                   </li>
                 </ul>
@@ -365,19 +345,19 @@ function App() {
                 <h4 className="text-2xl font-semibold mb-6">Career Preparation</h4>
                 <ul className="space-y-4 text-lg text-gray-600">
                   <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
                     Industry networking
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
                     Resume building
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
                     Interview preparation
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
                     Job placement assistance
                   </li>
                 </ul>
@@ -407,39 +387,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Hidden Monkey Species Section */}
-      {showMonkeys && (
-        <div className="fixed inset-0 bg-black/95 z-50 overflow-y-auto">
-          <div className="max-w-6xl mx-auto px-4 py-16">
-            <div className="flex justify-between items-center mb-16">
-              <h2 className="text-5xl font-bold text-white">Secret Monkey Species</h2>
-              <button 
-                onClick={() => setShowMonkeys(false)}
-                className="text-white hover:text-orange-500 transition-colors text-xl"
-              >
-                Close
-              </button>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {monkeySpecies.map((monkey, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white/10 backdrop-blur-md rounded-2xl p-8 transform hover:-translate-y-2 transition-all duration-300"
-                >
-                  <img 
-                    src={monkey.image} 
-                    alt={monkey.name}
-                    className="w-full h-64 object-cover rounded-xl mb-6"
-                  />
-                  <h3 className="text-2xl font-semibold mb-4 text-white">{monkey.name}</h3>
-                  <p className="text-gray-300 text-lg leading-relaxed">{monkey.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4">
