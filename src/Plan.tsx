@@ -76,7 +76,7 @@ function Plan() {
                         </li>
                         <li className="flex items-start gap-3">
                           <Heart className="w-5 h-5 text-orange-500 flex-shrink-0 mt-1" />
-                          <p>Launch crowdfunding campaigns led by Sohm and team</p>
+                          <p>Launch crowdfunding campaigns led by Soham and his team</p>
                         </li>
                         <li className="flex items-start gap-3">
                           <Users className="w-5 h-5 text-orange-500 flex-shrink-0 mt-1" />

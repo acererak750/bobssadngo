@@ -38,13 +38,13 @@ function Fundraising() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1518398046578-8cca57782e17?auto=format&fit=crop&q=80" 
+		src="./images/Young_thug.jpg?auto=format&fit=crop&q=80" 
                 alt="Street children looking at camera" 
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
                 <p className="text-gray-600 italic mb-4">
-                  "Before MonkeyMan, we didn't know where our next meal would come from but thanks to MonkeyMan I can reliably be fed. I dont ever have to worry about food again"
+                  "Before CookMonkey, we didn't know where our next meal would come from but thanks to CookMonkey I can reliably be fed. I dont ever have to worry about food again"
                 </p>
                 <p className="text-orange-500 font-semibold">- Arjun, 14 years old</p>
               </div>
@@ -57,7 +57,7 @@ function Fundraising() {
               />
               <div className="p-6">
                 <p className="text-gray-600 italic mb-4">
-                  "I used to beg near restaurants. Today, I'm training to work in one. MonkeyMan gave me more than food - they gave me dignity."
+                  "I used to beg near restaurants. Today, I'm training to work in one. CookMonkey gave me more than food - they gave me dignity."
                 </p>
                 <p className="text-orange-500 font-semibold">- Ravi, Student Chef</p>
               </div>
