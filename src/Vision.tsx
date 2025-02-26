@@ -28,7 +28,7 @@ function Vision() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80" 
+                src="/src/Images/bobthevision.jpg?auto=format&fit=crop&q=80" 
                 alt="Vision"
                 className="rounded-2xl shadow-2xl"
               />
