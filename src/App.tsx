@@ -3,17 +3,20 @@ import { ChefHat, Heart, Clock, Phone, Mail, MapPin, Users, Moon as Monkey } fro
 import FoodBank from './FoodBank';
 import Fundraising from './Fundraising';
 import Plan from './Plan';
+import Employees from './Employees';
 
 function App() {
   const [showMonkeys, setShowMonkeys] = useState(false);
   const [keys, setKeys] = useState<string[]>([]);
   const [scrollY, setScrollY] = useState(0);
   const [currentPage, setCurrentPage] = useState('home');
+  const [showSubMenu, setShowSubMenu] = useState(false);
   
   // Refs for scroll animations
   const heroRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const trainingRef = useRef<HTMLDivElement>(null);
+  const visionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Scroll to top when changing pages
@@ -62,39 +65,6 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [keys]);
 
-  const monkeySpecies = [
-    {
-      name: "Capuchin Monkey",
-      description: "Known for their intelligence and dexterity, these small but mighty primates represent our students' ability to master complex culinary skills with precision and care.",
-      image: "https://images.unsplash.com/photo-1579168765467-3b235f938439?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-      name: "Orangutan",
-      description: "Masters of problem-solving and tool use, orangutans embody our innovative approach to culinary education and adaptability in the kitchen.",
-      image: "https://images.unsplash.com/photo-1577114995803-d8ce0e2b4aa9?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-      name: "Mandrill",
-      description: "With their vibrant appearance and strong social bonds, mandrills represent the colorful diversity and community spirit of our culinary program.",
-      image: "https://images.unsplash.com/photo-1544991936-9464fa9ad4b7?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-      name: "Japanese Macaque",
-      description: "These innovative monkeys are known for their ability to learn and pass on cultural behaviors, just like our culinary traditions.",
-      image: "https://images.unsplash.com/photo-1554457945-ba5df6648602?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-      name: "Proboscis Monkey",
-      description: "Unique and distinctive, these monkeys remind us that success in culinary arts comes in many forms and flavors.",
-      image: "https://images.unsplash.com/photo-1580766770960-02c981f19d33?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-      name: "Spider Monkey",
-      description: "Agile and precise, spider monkeys represent the dexterity and attention to detail required in professional cooking.",
-      image: "https://images.unsplash.com/photo-1579168765467-3b235f938439?auto=format&fit=crop&q=80&w=800"
-    }
-  ];
-
   const renderNavigation = () => (
     <nav className="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
       <div className="max-w-6xl mx-auto px-4">
@@ -110,12 +80,33 @@ function App() {
             >
               Home
             </button>
-            <button 
-              onClick={() => setCurrentPage('plan')} 
-              className={`transition-colors ${currentPage === 'plan' ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
+            <div 
+              className="relative group"
+              onMouseEnter={() => setShowSubMenu(true)}
+              onMouseLeave={() => setShowSubMenu(false)}
             >
-              Our Plan
-            </button>
+              <button 
+                className={`transition-colors ${['plan', 'employees'].includes(currentPage) ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
+              >
+                About Us
+              </button>
+              <div className={`absolute top-full left-1/2 transform -translate-x-1/2 pt-2 transition-all duration-300 ${showSubMenu ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden min-w-[160px]">
+                  <button 
+                    onClick={() => setCurrentPage('plan')}
+                    className={`block w-full px-4 py-2 text-left hover:bg-orange-50 transition-colors ${currentPage === 'plan' ? 'text-orange-500' : 'text-gray-700'}`}
+                  >
+                    Our Plan
+                  </button>
+                  <button 
+                    onClick={() => setCurrentPage('employees')}
+                    className={`block w-full px-4 py-2 text-left hover:bg-orange-50 transition-colors ${currentPage === 'employees' ? 'text-orange-500' : 'text-gray-700'}`}
+                  >
+                    Our Team
+                  </button>
+                </div>
+              </div>
+            </div>
             <button 
               onClick={() => setCurrentPage('foodbank')} 
               className={`transition-colors ${currentPage === 'foodbank' ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
@@ -161,6 +152,15 @@ function App() {
     );
   }
 
+  if (currentPage === 'employees') {
+    return (
+      <>
+        {renderNavigation()}
+        <Employees />
+      </>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {renderNavigation()}
@@ -189,8 +189,44 @@ function App() {
         </div>
       </header>
 
+      {/* Vision Statement */}
+      <section ref={visionRef} className="py-32 px-4 bg-orange-50">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-5xl font-bold mb-12">Our Vision</h2>
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80" 
+                alt="Vision"
+                className="rounded-2xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
+            </div>
+            <div className="text-left space-y-6">
+              <p className="text-2xl font-light leading-relaxed">
+                "To create a world where culinary education becomes a powerful catalyst for social change, transforming lives and communities through the art of cooking."
+              </p>
+              <div className="space-y-4 text-lg text-gray-700">
+                <p>
+                  We envision a future where every individual, regardless of their background, has the opportunity to pursue their culinary dreams and achieve financial independence through professional cooking skills.
+                </p>
+                <p>
+                  By 2030, we aim to:
+                </p>
+                <ul className="space-y-2 list-disc list-inside">
+                  <li>Train 1000+ underprivileged individuals in professional culinary arts</li>
+                  <li>Establish 5 food banks across major cities in India</li>
+                  <li>Create a self-sustaining ecosystem of culinary education and community service</li>
+                  <li>Achieve 100% employment rate for our graduates</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section id="about" ref={aboutRef} className="py-32 px-4 bg-gray-50 transform transition-all duration-1000">
+      <section id="about" ref={aboutRef} className="py-32 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-24">About Our Mission</h2>
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -220,7 +256,7 @@ function App() {
       </section>
 
       {/* Training Program */}
-      <section id="training" ref={trainingRef} className="py-32 px-4">
+      <section id="training" ref={trainingRef} className="py-32 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-center mb-24">Our Training Program</h2>
           
