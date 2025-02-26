@@ -38,13 +38,11 @@ function Vision() {
               <div>
                 <h2 className="text-4xl font-bold mb-6">Our Vision Statement</h2>
                 <p className="text-2xl font-light leading-relaxed text-gray-700">
-                  "To create a world where culinary education becomes a powerful catalyst for social change, transforming lives and communities through the art of cooking."
+                  "To create a world where poverty is non-existent, and everyone can get a job, no matter how much money they have. They should be able to follow their dreams, regardless of  their background, access to resources, or the challenges they face."
                 </p>
               </div>
               <div className="space-y-6">
-                <p className="text-lg text-gray-600">
-                  We envision a future where every individual, regardless of their background, has the opportunity to pursue their culinary dreams and achieve financial independence through professional cooking skills.
-                </p>
+            
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <h3 className="text-xl font-semibold mb-4">2030 Goals</h3>
                   <ul className="space-y-4">

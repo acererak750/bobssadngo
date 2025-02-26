@@ -244,60 +244,6 @@ function Plan() {
           </div>
         </div>
       </div>
-
-      {/* Team Requirements */}
-      <div 
-        ref={(el) => (sections.current[5] = el)}
-        className="py-20 bg-orange-50 transform transition-all duration-1000 opacity-0 translate-y-16"
-      >
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">Our Team Requirements</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
-              <Truck className="w-12 h-12 text-orange-500 mb-6" />
-              <h3 className="text-2xl font-semibold mb-4">Logistics Driver</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
-                  <p>Supplied by anonymous benefactor</p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
-                  <p>Responsible for ingredient collection</p>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
-              <Heart className="w-12 h-12 text-orange-500 mb-6" />
-              <h3 className="text-2xl font-semibold mb-4">Fundraising Expert</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
-                  <p>Manages crowdfunding campaigns</p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
-                  <p>Coordinates with donors and supporters</p>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-2 transition-all duration-300">
-              <ChefHat className="w-12 h-12 text-orange-500 mb-6" />
-              <h3 className="text-2xl font-semibold mb-4">Cooking Instructors</h3>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
-                  <p>Hired by Pronnoy</p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2"></span>
-                  <p>Professional culinary training expertise</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
