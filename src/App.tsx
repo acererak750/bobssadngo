@@ -16,6 +16,11 @@ function App() {
   const trainingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Scroll to top when changing pages
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentPage]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
       
@@ -96,7 +101,7 @@ function App() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => setCurrentPage('home')}>
             <Monkey className="w-8 h-8 text-orange-500" />
-            <span className="text-xl font-bold">MonkeyMan</span>
+            <span className="text-xl font-bold">CookMonkey</span>
           </div>
           <div className="hidden md:flex space-x-8">
             <button 
@@ -173,8 +178,13 @@ function App() {
         </div>
         <div className="relative h-full flex items-center justify-center text-center px-4">
           <div className="max-w-4xl transform translate-y-[-50%] opacity-0 animate-fade-in">
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">MonkeyMan</h1>
-            <p className="text-xl md:text-2xl text-white">Empowering Lives Through Culinary Education</p>
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">CookMonkey</h1>
+            <p className="text-xl md:text-2xl text-white mb-8">Empowering Lives Through Culinary Education</p>
+            <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-md p-4 rounded-xl">
+              <p className="text-white text-lg">
+                Breaking the cycle of poverty through world-class culinary education while serving our community.
+              </p>
+            </div>
           </div>
         </div>
       </header>
@@ -352,7 +362,7 @@ function App() {
             </div>
             <div className="flex flex-col items-center transform hover:-translate-y-2 transition-all duration-300">
               <Mail className="w-12 h-12 text-orange-500 mb-6" />
-              <p className="text-xl">help@monkeymanchefs.org</p>
+              <p className="text-xl">help@cookmonkey.org</p>
             </div>
             <div className="flex flex-col items-center transform hover:-translate-y-2 transition-all duration-300">
               <MapPin className="w-12 h-12 text-orange-500 mb-6" />
@@ -398,7 +408,7 @@ function App() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-lg">© 2024 MonkeyMan. Empowering lives through culinary education.</p>
+          <p className="text-lg">© 2024 CookMonkey. Empowering lives through culinary education.</p>
           <p className="text-gray-400 text-base mt-4">Try the Konami code: ↑↑↓↓←→←→AB</p>
         </div>
       </footer>

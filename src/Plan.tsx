@@ -1,11 +1,38 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ChefHat, Truck, Users, GraduationCap, Building, Heart, Clock, Target, ArrowRight } from 'lucide-react';
 
 function Plan() {
+  const sections = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+            entry.target.classList.remove('opacity-0', 'translate-y-16');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    sections.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative h-[60vh] overflow-hidden">
+      <div 
+        ref={(el) => (sections.current[0] = el)}
+        className="relative h-[60vh] overflow-hidden transform transition-all duration-1000 opacity-0 translate-y-16"
+      >
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -27,11 +54,14 @@ function Plan() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="space-y-24">
             {/* Stage 1 */}
-            <div className="relative">
+            <div 
+              ref={(el) => (sections.current[1] = el)}
+              className="relative transform transition-all duration-1000 opacity-0 translate-y-16"
+            >
               <div className="absolute left-0 top-0 w-1 h-full bg-orange-100 rounded-full"></div>
               <div className="relative pl-8">
                 <div className="absolute left-0 top-0 w-1 h-12 bg-orange-500 rounded-full"></div>
-                <div className="bg-white rounded-2xl shadow-lg p-8">
+                <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                   <div className="flex items-center gap-4 mb-6">
                     <Heart className="w-10 h-10 text-orange-500" />
                     <h2 className="text-3xl font-bold">Stage 1: Fundraising</h2>
@@ -73,11 +103,14 @@ function Plan() {
             </div>
 
             {/* Stage 2 */}
-            <div className="relative">
+            <div 
+              ref={(el) => (sections.current[2] = el)}
+              className="relative transform transition-all duration-1000 opacity-0 translate-y-16"
+            >
               <div className="absolute left-0 top-0 w-1 h-full bg-orange-100 rounded-full"></div>
               <div className="relative pl-8">
                 <div className="absolute left-0 top-0 w-1 h-12 bg-orange-500 rounded-full"></div>
-                <div className="bg-white rounded-2xl shadow-lg p-8">
+                <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                   <div className="flex items-center gap-4 mb-6">
                     <ChefHat className="w-10 h-10 text-orange-500" />
                     <h2 className="text-3xl font-bold">Stage 2: Extended Program</h2>
@@ -120,11 +153,14 @@ function Plan() {
             </div>
 
             {/* Stage 3 */}
-            <div className="relative">
+            <div 
+              ref={(el) => (sections.current[3] = el)}
+              className="relative transform transition-all duration-1000 opacity-0 translate-y-16"
+            >
               <div className="absolute left-0 top-0 w-1 h-full bg-orange-100 rounded-full"></div>
               <div className="relative pl-8">
                 <div className="absolute left-0 top-0 w-1 h-12 bg-orange-500 rounded-full"></div>
-                <div className="bg-white rounded-2xl shadow-lg p-8">
+                <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                   <div className="flex items-center gap-4 mb-6">
                     <Building className="w-10 h-10 text-orange-500" />
                     <h2 className="text-3xl font-bold">Stage 3: Food Bank Integration</h2>
@@ -162,11 +198,14 @@ function Plan() {
             </div>
 
             {/* Stage 4 */}
-            <div className="relative">
+            <div 
+              ref={(el) => (sections.current[4] = el)}
+              className="relative transform transition-all duration-1000 opacity-0 translate-y-16"
+            >
               <div className="absolute left-0 top-0 w-1 h-full bg-orange-100 rounded-full"></div>
               <div className="relative pl-8">
                 <div className="absolute left-0 top-0 w-1 h-12 bg-orange-500 rounded-full"></div>
-                <div className="bg-white rounded-2xl shadow-lg p-8">
+                <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                   <div className="flex items-center gap-4 mb-6">
                     <GraduationCap className="w-10 h-10 text-orange-500" />
                     <h2 className="text-3xl font-bold">Stage 4: Completion & Expansion</h2>
@@ -207,7 +246,10 @@ function Plan() {
       </div>
 
       {/* Team Requirements */}
-      <div className="py-20 bg-orange-50">
+      <div 
+        ref={(el) => (sections.current[5] = el)}
+        className="py-20 bg-orange-50 transform transition-all duration-1000 opacity-0 translate-y-16"
+      >
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Our Team Requirements</h2>
           <div className="grid md:grid-cols-3 gap-8">
