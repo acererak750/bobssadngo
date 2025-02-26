@@ -38,8 +38,8 @@ function Fundraising() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <img 
-		src="./images/Young_thug.jpg?auto=format&fit=crop&q=80" 
-                alt="Street children looking at camera" 
+                src="/src/Images/Arjun.jpg" 
+                alt="Young boy looking hopeful" 
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
@@ -51,8 +51,8 @@ function Fundraising() {
             </div>
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&q=80" 
-                alt="Young boy looking through window" 
+                src="/src/Images/ravi.jpg" 
+                alt="Young aspiring chef" 
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
@@ -64,8 +64,8 @@ function Fundraising() {
             </div>
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1444664597500-f3ea66c4d289?auto=format&fit=crop&q=80" 
-                alt="Mother and child" 
+                src="/src/Images/lakshmi.jpg" 
+                alt="Mother with hopeful expression" 
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
@@ -86,8 +86,8 @@ function Fundraising() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="relative h-96 rounded-2xl overflow-hidden group">
               <img 
-                src="https://images.unsplash.com/photo-1504159506876-4b8a1c0c4414?auto=format&fit=crop&q=80" 
-                alt="Poor children" 
+                src="/src/Images/poor children.jpg" 
+                alt="Children with hope for the future" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
@@ -97,8 +97,8 @@ function Fundraising() {
             <div className="grid grid-rows-2 gap-8">
               <div className="relative h-44 rounded-2xl overflow-hidden group">
                 <img 
-                  src="https://images.unsplash.com/photo-1441448770220-76743f9e6af6?auto=format&fit=crop&q=80" 
-                  alt="Homeless man" 
+                  src="/src/Images/Homeless to cullnary chef.jpg" 
+                  alt="Transformation journey" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
