@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, Users, AlertTriangle, Utensils, BarChart, Target, ArrowRight } from 'lucide-react';
+import { TrendingUp, Users, AlertTriangle, Utensils, BarChart, Target, ArrowRight, CheckCircle } from 'lucide-react';
 
 function Statistics() {
   return (
@@ -180,6 +180,138 @@ function Statistics() {
                     </div>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories Section - NEW */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16">Proven Success: Culinary Training Programs That Work</h2>
+          
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="bg-green-500 p-6">
+                <h3 className="text-2xl font-bold text-white">Second Harvest Food Bank (Orlando, FL)</h3>
+              </div>
+              <div className="p-8">
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-lg font-medium">16-week culinary training program</p>
+                      <p className="text-gray-600 mt-1">Provides at-risk and economically disadvantaged adults with culinary and life skills training</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-lg font-medium">81% employment rate</p>
+                      <p className="text-gray-600 mt-1">Graduates find employment in the food service industry within one month of graduation</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-lg font-medium">400+ graduates since 2013</p>
+                      <p className="text-gray-600 mt-1">Many have gone on to work at top hotels and restaurants in the region</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="bg-green-500 p-6">
+                <h3 className="text-2xl font-bold text-white">DC Central Kitchen (Washington, DC)</h3>
+              </div>
+              <div className="p-8">
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-lg font-medium">14-week intensive culinary job training</p>
+                      <p className="text-gray-600 mt-1">Empowers adults facing high barriers to employment, including returning citizens, individuals with histories of substance abuse, and homelessness</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-lg font-medium">90% job placement rate</p>
+                      <p className="text-gray-600 mt-1">With starting wages averaging $15 per hour, well above minimum wage</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-lg font-medium">2,000+ graduates since inception</p>
+                      <p className="text-gray-600 mt-1">Program has been running successfully for over 25 years</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="bg-green-500 p-6">
+              <h3 className="text-2xl font-bold text-white">Hot Bread Kitchen (New York, NY)</h3>
+            </div>
+            <div className="p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-lg font-medium">9-month intensive training program</p>
+                      <p className="text-gray-600 mt-1">Focuses on immigrant women and women of color facing economic insecurity</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-lg font-medium">80% of graduates find employment</p>
+                      <p className="text-gray-600 mt-1">With an average wage increase of 30% compared to previous employment</p>
+                    </div>
+                  </li>
+                </ul>
+                
+                <ul className="space-y-6">
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-lg font-medium">$42 million economic impact</p>
+                      <p className="text-gray-600 mt-1">Generated through increased wages and reduced public benefits</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-lg font-medium">95% retention rate after one year</p>
+                      <p className="text-gray-600 mt-1">Demonstrating the long-term sustainability of the program's impact</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 bg-green-50 rounded-xl p-8">
+            <h3 className="text-2xl font-semibold mb-4">Key Success Factors</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-lg p-6 shadow">
+                <h4 className="text-lg font-medium mb-3">Comprehensive Training</h4>
+                <p className="text-gray-600">Programs that combine technical culinary skills with life skills, financial literacy, and job readiness have the highest success rates.</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow">
+                <h4 className="text-lg font-medium mb-3">Industry Partnerships</h4>
+                <p className="text-gray-600">Strong relationships with local restaurants, hotels, and food service companies ensure graduates have employment opportunities.</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow">
+                <h4 className="text-lg font-medium mb-3">Holistic Support</h4>
+                <p className="text-gray-600">Successful programs address barriers like housing, transportation, and childcare to ensure participants can complete training.</p>
               </div>
             </div>
           </div>
