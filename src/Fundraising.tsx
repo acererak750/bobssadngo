@@ -38,7 +38,7 @@ function Fundraising() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <img 
-                src="/src/Images/Arjun.jpg" 
+                src="https://i.postimg.cc/BvYgXMN1/Arjun.png" 
                 alt="Young boy looking hopeful" 
                 className="w-full h-48 object-cover"
               />
@@ -51,7 +51,7 @@ function Fundraising() {
             </div>
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <img 
-                src="/src/Images/ravi.jpg" 
+                src="https://i.postimg.cc/DzZQk1Ff/ravi.png" 
                 alt="Young aspiring chef" 
                 className="w-full h-48 object-cover"
               />
@@ -64,7 +64,7 @@ function Fundraising() {
             </div>
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <img 
-                src="/src/Images/lakshmi.jpg" 
+                src="https://i.postimg.cc/y8nhbvMr/lakshmi.png" 
                 alt="Mother with hopeful expression" 
                 className="w-full h-48 object-cover"
               />
@@ -86,7 +86,7 @@ function Fundraising() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="relative h-96 rounded-2xl overflow-hidden group">
               <img 
-                src="/src/Images/poor children.jpg" 
+                src="https://i.postimg.cc/bvBxzdNx/poor-children.png" 
                 alt="Children with hope for the future" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -97,7 +97,7 @@ function Fundraising() {
             <div className="grid grid-rows-2 gap-8">
               <div className="relative h-44 rounded-2xl overflow-hidden group">
                 <img 
-                  src="/src/Images/Homeless to cullnary chef.jpg" 
+                  src="https://i.postimg.cc/wTXQh60z/Homeless-to-cullnary-chef.png" 
                   alt="Transformation journey" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />

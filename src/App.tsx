@@ -7,6 +7,7 @@ import Employees from './Employees';
 import Vision from './Vision';
 import Posters from './Posters';
 import FAQ from './FAQ';
+import Statistics from './Statistics';
 
 function App() {
   const [showMonkeys, setShowMonkeys] = useState(false);
@@ -107,6 +108,12 @@ function App() {
                     className={`block w-full px-4 py-2 text-left hover:bg-orange-50 transition-colors ${currentPage === 'employees' ? 'text-orange-500' : 'text-gray-700'}`}
                   >
                     Our Team
+                  </button>
+                  <button 
+                    onClick={() => setCurrentPage('statistics')}
+                    className={`block w-full px-4 py-2 text-left hover:bg-orange-50 transition-colors ${currentPage === 'statistics' ? 'text-orange-500' : 'text-gray-700'}`}
+                  >
+                    Poverty Statistics
                   </button>
                 </div>
               </div>
@@ -221,6 +228,15 @@ function App() {
       <>
         {renderNavigation()}
         <FAQ />
+      </>
+    );
+  }
+
+  if (currentPage === 'statistics') {
+    return (
+      <>
+        {renderNavigation()}
+        <Statistics />
       </>
     );
   }
