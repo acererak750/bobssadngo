@@ -8,38 +8,38 @@ function Posters() {
       id: 1,
       title: "Breaking the Cycle of Poverty",
       // Using a 42x59.4cm (A2) aspect ratio image
-      imageUrl: "https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&q=80&w=420&h=594",
-      description: "Education is the key to breaking free from poverty"
+      imageUrl: "/src/Images/1.5 million.jpg?auto=format&fit=crop&q=80&w=420&h=594",
+      description: "Help the homeless and change their lives."
     },
     {
       id: 2,
       title: "Empowering Through Culinary Arts",
-      imageUrl: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80&w=420&h=594",
-      description: "Learn, grow, and transform your life through cooking"
+      imageUrl: "/src/Images/1.5 million-koki.jpg?auto=format&fit=crop&q=80&w=420&h=594",
+      description: "Learn, grow, and transform your life through cooking."
     },
     {
       id: 3,
       title: "Join Our Mission",
-      imageUrl: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=420&h=594",
-      description: "Together we can make a difference"
+      imageUrl: "/src/Images/25,000.jpg?auto=format&fit=crop&q=80&w=420&h=594",
+      description: "Stop this from happening.Donate today."
     },
     {
       id: 4,
       title: "Feed the Future",
-      imageUrl: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=420&h=594",
+      imageUrl: "/src/Images/Donate now and Change someones life..jpg?auto=format&fit=crop&q=80&w=420&h=594",
       description: "Nourishing bodies and minds for a brighter tomorrow"
     },
     {
       id: 5,
-      title: "From Streets to Kitchens",
-      imageUrl: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=420&h=594",
-      description: "Transforming lives through professional culinary training"
+      title: "Help the homeless",
+      imageUrl: "/src/Images/This is Ramesh. He has not had food for 3 days..jpg?auto=format&fit=crop&q=80&w=420&h=594",
+      description: "We can prevent this from happening. All it takes is one donation"
     },
     {
       id: 6,
-      title: "Community First",
-      imageUrl: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&q=80&w=420&h=594",
-      description: "Building stronger communities through food and education"
+      title: "Join the cause",
+      imageUrl: "/src/Images/We need donors and culinary instructors to help our cause..jpg?auto=format&fit=crop&q=80&w=420&h=594",
+      description: "Join us and change lives."
     }
   ];
 
