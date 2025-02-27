@@ -8,37 +8,37 @@ function Posters() {
       id: 1,
       title: "Breaking the Cycle of Poverty",
       // Using a 42x59.4cm (A2) aspect ratio image
-      imageUrl: "/src/Images/1.5 million.jpg?auto=format&fit=crop&q=80&w=420&h=594",
+      imageUrl: "https://i.postimg.cc/j2NQ3KTz/1-5-million.jpg",
       description: "Help the homeless and change their lives."
     },
     {
       id: 2,
       title: "Empowering Through Culinary Arts",
-      imageUrl: "/src/Images/1.5 million-koki.jpg?auto=format&fit=crop&q=80&w=420&h=594",
+      imageUrl: "https://i.postimg.cc/9MsYB06m/1-5-million-koki.jpg",
       description: "Learn, grow, and transform your life through cooking."
     },
     {
       id: 3,
       title: "Join Our Mission",
-      imageUrl: "/src/Images/25,000.jpg?auto=format&fit=crop&q=80&w=420&h=594",
+      imageUrl: "https://i.postimg.cc/hjX0xT3Z/25-000.jpg",
       description: "Stop this from happening.Donate today."
     },
     {
       id: 4,
       title: "Feed the Future",
-      imageUrl: "/src/Images/Donate now and Change someones life..jpg?auto=format&fit=crop&q=80&w=420&h=594",
+      imageUrl: "https://i.postimg.cc/jSRQcGF7/Donate-now-and-Change-someones-life.jpg",
       description: "Nourishing bodies and minds for a brighter tomorrow"
     },
     {
       id: 5,
       title: "Help the homeless",
-      imageUrl: "/src/Images/This is Ramesh. He has not had food for 3 days..jpg?auto=format&fit=crop&q=80&w=420&h=594",
+      imageUrl: "https://i.postimg.cc/Hx8QjHVf/This-is-Ramesh-He-has-not-had-food-for-3-days.jpg",
       description: "We can prevent this from happening. All it takes is one donation"
     },
     {
       id: 6,
       title: "Join the cause",
-      imageUrl: "/src/Images/We need donors and culinary instructors to help our cause..jpg?auto=format&fit=crop&q=80&w=420&h=594",
+      imageUrl: "https://i.postimg.cc/x8rLz7mq/We-need-donors-and-culinary-instructors-to-help-our-cause.jpg",
       description: "Join us and change lives."
     }
   ];
