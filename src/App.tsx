@@ -5,6 +5,7 @@ import Fundraising from './Fundraising';
 import Plan from './Plan';
 import Employees from './Employees';
 import Vision from './Vision';
+import Posters from './Posters';
 
 function App() {
   const [showMonkeys, setShowMonkeys] = useState(false);
@@ -126,6 +127,12 @@ function App() {
             >
               Fundraising
             </button>
+            <button 
+              onClick={() => setCurrentPage('posters')} 
+              className={`transition-colors ${currentPage === 'posters' ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
+            >
+              Posters
+            </button>
           </div>
         </div>
       </div>
@@ -173,6 +180,15 @@ function App() {
       <>
         {renderNavigation()}
         <Vision />
+      </>
+    );
+  }
+
+  if (currentPage === 'posters') {
+    return (
+      <>
+        {renderNavigation()}
+        <Posters />
       </>
     );
   }
