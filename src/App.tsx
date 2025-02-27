@@ -6,6 +6,7 @@ import Plan from './Plan';
 import Employees from './Employees';
 import Vision from './Vision';
 import Posters from './Posters';
+import FAQ from './FAQ';
 
 function App() {
   const [showMonkeys, setShowMonkeys] = useState(false);
@@ -13,6 +14,7 @@ function App() {
   const [scrollY, setScrollY] = useState(0);
   const [currentPage, setCurrentPage] = useState('home');
   const [showSubMenu, setShowSubMenu] = useState(false);
+  const [showFundraisingSubMenu, setShowFundraisingSubMenu] = useState(false);
   
   // Refs for scroll animations
   const heroRef = useRef<HTMLDivElement>(null);
@@ -121,17 +123,38 @@ function App() {
             >
               Food Bank
             </button>
-            <button 
-              onClick={() => setCurrentPage('fundraising')} 
-              className={`transition-colors ${currentPage === 'fundraising' ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
+            <div 
+              className="relative group"
+              onMouseEnter={() => setShowFundraisingSubMenu(true)}
+              onMouseLeave={() => setShowFundraisingSubMenu(false)}
             >
-              Fundraising
-            </button>
+              <button 
+                className={`transition-colors ${['fundraising', 'posters'].includes(currentPage) ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
+              >
+                Fundraising
+              </button>
+              <div className={`absolute top-full left-1/2 transform -translate-x-1/2 pt-2 transition-all duration-300 ${showFundraisingSubMenu ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden min-w-[160px]">
+                  <button 
+                    onClick={() => setCurrentPage('fundraising')}
+                    className={`block w-full px-4 py-2 text-left hover:bg-orange-50 transition-colors ${currentPage === 'fundraising' ? 'text-orange-500' : 'text-gray-700'}`}
+                  >
+                    Donate
+                  </button>
+                  <button 
+                    onClick={() => setCurrentPage('posters')}
+                    className={`block w-full px-4 py-2 text-left hover:bg-orange-50 transition-colors ${currentPage === 'posters' ? 'text-orange-500' : 'text-gray-700'}`}
+                  >
+                    Posters
+                  </button>
+                </div>
+              </div>
+            </div>
             <button 
-              onClick={() => setCurrentPage('posters')} 
-              className={`transition-colors ${currentPage === 'posters' ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
+              onClick={() => setCurrentPage('faq')} 
+              className={`transition-colors ${currentPage === 'faq' ? 'text-orange-500 font-medium' : 'text-gray-700 hover:text-orange-500'}`}
             >
-              Posters
+              FAQ
             </button>
           </div>
         </div>
@@ -189,6 +212,15 @@ function App() {
       <>
         {renderNavigation()}
         <Posters />
+      </>
+    );
+  }
+
+  if (currentPage === 'faq') {
+    return (
+      <>
+        {renderNavigation()}
+        <FAQ />
       </>
     );
   }
@@ -408,7 +440,7 @@ function App() {
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-lg">© 2024 CookMonkey. Empowering lives through culinary education.</p>
-          <p className="text-gray-400 text-base mt-4">Try the Konami code: ↑↑↓↓←→←→AB</p>
+        
         </div>
       </footer>
     </div>
